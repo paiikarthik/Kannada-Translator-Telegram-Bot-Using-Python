@@ -13,7 +13,7 @@ async def translate(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text(translated)
 
-app = ApplicationBuilder().token("8657539373:AAFlIPMbSX9urrhMC1f0-iF6rRb2UuAFBC0").build()
+app = ApplicationBuilder().token("//your token //changed token").build()
 
 app.add_handler(CommandHandler("start",start))
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, translate))
