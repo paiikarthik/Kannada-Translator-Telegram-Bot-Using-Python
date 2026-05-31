@@ -4,7 +4,7 @@ from deep_translator import GoogleTranslator #translates text using deep-transla
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.effective_message.reply_text(
-        "ಸ್ವಾಗತ 👋\nಆಂಗ್ಲ ಭಾಷೆಯ ಪಠ್ಯ ಕಳುಹಿಸಿ, ನಾನು ಕನ್ನಡಕ್ಕೆ ಭಾಷಾಂತರಿಸುತ್ತೇನೆ."
+        "ಸ್ವಾಗತ 👋\n ನನಗೆ  ಆಂಗ್ಲ ಭಾಷೆಯ ಪಠ್ಯ ಕಳುಹಿಸಿ, ನಾನು ಕನ್ನಡಕ್ಕೆ ಭಾಷಾಂತರಿಸುತ್ತೇನೆ."
     )
 async def translate(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = update.message.text
@@ -13,7 +13,7 @@ async def translate(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text(translated)
 
-app = ApplicationBuilder().token("//token hided").build()
+app = ApplicationBuilder().token("8657539373:AAFlIPMbSX9urrhMC1f0-iF6rRb2UuAFBC0").build()
 
 app.add_handler(CommandHandler("start",start))
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, translate))
